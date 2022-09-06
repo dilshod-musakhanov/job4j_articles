@@ -16,6 +16,7 @@ public class RandomArticleGenerator implements ArticleGenerator {
         var content = wordsCopy.stream()
                 .map(Word::getValue)
                 .collect(Collectors.joining(" "));
+        wordsCopy = null;
         return new Article(content);
     }
 }
